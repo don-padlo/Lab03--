@@ -53,3 +53,20 @@ Console.WriteLine($"Возраст {myAge} == {votingAge} :{isExactAge}");
 Console.WriteLine($"Возраст {myAge}>= {votingAge}(может голосовать)");
 Console.WriteLine($"Балл {myGrade}!= 2.0 (): {isNotFailing}");
 
+
+Console.WriteLine();
+Console.WriteLine("Короткое замыкание");
+
+bool CheckAndPrint(string label,bool value) {
+    Console.WriteLine($" Вычисляем: {label}");
+    return value;
+}
+
+Console.WriteLine("Проверяем && (первый операнд false)");
+bool resultAnd = CheckAndPrint("Al", false) && CheckAndPrint("B", true);
+Console.WriteLine($"Результат: {resultAnd}");
+
+Console.WriteLine();
+Console.WriteLine("Проверяем || (первый операнд true)");
+bool result0r = CheckAndPrint("C", true) || CheckAndPrint("D", false);
+Console.WriteLine($"Результат: {result0r}");
