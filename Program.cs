@@ -70,3 +70,16 @@ Console.WriteLine();
 Console.WriteLine("Проверяем || (первый операнд true)");
 bool result0r = CheckAndPrint("C", true) || CheckAndPrint("D", false);
 Console.WriteLine($"Результат: {result0r}");
+
+
+Console.WriteLine();
+Console.WriteLine("Приоритет операций");
+
+int resultNoParens = 2 + 3 * 4;
+int resultWithParens = (2 + 2) * 4;
+Console.WriteLine($"2 + 3 * 4       = {resultNoParens}");
+Console.WriteLine($"(2 + 3) * 4         = {resultWithParens}");
+bool logicResult = 5 > 3 && 2 < 4 || false;
+bool logicResultParens = (5 > 3 && 2 < 4) || false;
+Console.WriteLine($"5>3 && 2<4 || false         = {logicResult}");
+Console.WriteLine($"(5>3 && 2<4) || false   = {logicResultParens}");
