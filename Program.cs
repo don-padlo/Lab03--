@@ -121,3 +121,12 @@ Console.WriteLine($"Хороший экзамен (>= 60): {hasGoodExam}");
 Console.WriteLine($"Льгота: {hasBenefit}");
 Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
 Console.WriteLine($"Итоговый балл: {totalScore}");
+
+
+Console.WriteLine("Введите число: ");
+int integer = int.Parse(Console.ReadLine());
+bool boolIsEven = ((integer % 2) == 0);
+
+Console.WriteLine($"Чётность числа - {boolIsEven}");
+
+
