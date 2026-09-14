@@ -20,7 +20,7 @@ Console.WriteLine();
 Console.WriteLine("Постфикс vs префикс");
 
 int lessonNumber = 1;
-Console.WriteLine($"LessoNumber++ выводит: {lessonNumber++}");
+Console.WriteLine($"LessonNumber++ выводит: {lessonNumber++}");
 Console.WriteLine($"После этого LessonNumber: {lessonNumber}");
 
 int weekNumber = 1;
@@ -130,3 +130,20 @@ bool boolIsEven = ((integer % 2) == 0);
 Console.WriteLine($"Чётность числа - {boolIsEven}");
 
 
+int x = 1;
+int y = 1;
+
+Console.WriteLine();
+Console.WriteLine($"Сложение: {1 + x++}");
+//сложилось старое число, после чего оно увеличилось на 1
+Console.WriteLine(x);
+
+Console.WriteLine();
+Console.WriteLine(1 + ++y);
+//сразу сложилось увеличенное число
+Console.WriteLine(y);
+
+Console.WriteLine();
+Console.WriteLine($"Вывод чисел: x = {x++} y = {++y}");
+//++x выводит на экран старое число,после чего увеличивает его
+Console.WriteLine($"x = {x}");
