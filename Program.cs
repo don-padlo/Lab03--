@@ -147,3 +147,22 @@ Console.WriteLine();
 Console.WriteLine($"Вывод чисел: x = {x++} y = {++y}");
 //++x выводит на экран старое число,после чего увеличивает его
 Console.WriteLine($"x = {x}");
+
+
+Console.WriteLine();
+Console.WriteLine("Введите сумму покупки: ");
+double summa = double.Parse(Console.ReadLine());
+
+Console.WriteLine("У вас есть наша карта?(1 - да, 0 - нет): ");
+int Card = int.Parse(Console.ReadLine());
+bool card = (Card == 1) || false;
+
+Console.WriteLine("Укажите кол-во товаров: ");
+int kol = int.Parse(Console.ReadLine());
+
+bool eligibleForDiscount = (kol >= 3 && summa >= 3000) || card;
+
+Console.WriteLine();
+Console.WriteLine($"Кол-во товаров и сумма стоимости - {kol}, {summa}");
+Console.WriteLine($"Карта магазина - {card}");
+Console.WriteLine($"Доступность скидки - {eligibleForDiscount}");
