@@ -57,7 +57,8 @@ Console.WriteLine($"Балл {myGrade}!= 2.0 (): {isNotFailing}");
 Console.WriteLine();
 Console.WriteLine("Короткое замыкание");
 
-bool CheckAndPrint(string label,bool value) {
+bool CheckAndPrint(string label, bool value)
+{
     Console.WriteLine($" Вычисляем: {label}");
     return value;
 }
@@ -83,3 +84,40 @@ bool logicResult = 5 > 3 && 2 < 4 || false;
 bool logicResultParens = (5 > 3 && 2 < 4) || false;
 Console.WriteLine($"5>3 && 2<4 || false         = {logicResult}");
 Console.WriteLine($"(5>3 && 2<4) || false   = {logicResultParens}");
+
+
+Console.WriteLine();
+Console.WriteLine("Приёмная комиссия");
+
+Console.WriteLine("Введите средний балл аттестата: ");
+double averageGrade = double.Parse(Console.ReadLine());
+
+Console.WriteLine("Введите баллы за экзамен (0-100): ");
+int examScore = int.Parse(Console.ReadLine());
+
+Console.WriteLine("Есть льгота? (1 - да, 0 - нет): ");
+int benefitInput = int.Parse(Console.ReadLine());
+bool hasBenefit = (benefitInput == 1);
+
+// TODO 1: hasGoodCertificate = true, если averageGrade >= 4.0
+bool hasGoodCertificate = (averageGrade >= 4.0);
+
+// TODO 2: hasGoodExam = true, если examScore >=60
+bool hasGoodExam = (examScore >= 60);
+
+// TODO 3: isEligibleByRules = true, если 
+// (hasGoodCertificate И hasGoodExam) или hasBenefit
+bool isEligibleByRules = (hasGoodCertificate && hasGoodExam || hasBenefit);
+
+// TODO 4: итоговый балл = средний балл * 10, а затем прибавьте баллы
+// экзамена используйте оператор += для второго шага
+double totalScore = averageGrade * 10;
+totalScore += examScore;
+
+Console.WriteLine();
+Console.WriteLine("Результат");
+Console.WriteLine($"Хороший аттестат (>= 4.0): {hasGoodCertificate}");
+Console.WriteLine($"Хороший экзамен (>= 60): {hasGoodExam}");
+Console.WriteLine($"Льгота: {hasBenefit}");
+Console.WriteLine($"Проходит по правилам: {isEligibleByRules}");
+Console.WriteLine($"Итоговый балл: {totalScore}");
